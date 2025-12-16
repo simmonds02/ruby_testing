@@ -35,17 +35,21 @@ end
 
 describe Cat do
   # Create a subject with your choice of cat name and optional breed/color.
+  subject(:ghost) {described_class.new('Ghost', 'Maine Coon', 'Black')}
 
   # Write a test using the second shared_example to test that cat responds to
   # talk ('meow').
-  context '' do
+  context 'when Cat is a child class of Pet and Pet has multiple child classes' do
+    include_examples 'base class method name', 'shared method name'
   end
 
   # remove the 'x' before running this test
-  xit 'is not hungry' do
+  it 'is not hungry' do
+    expect(ghost).to respond_to(:meal_time)
   end
 
   # remove the 'x' before running this test
-  xit 'is hiding' do
+  it 'is hiding' do
+    expect(ghost.hiding?).to be true
   end
 end
