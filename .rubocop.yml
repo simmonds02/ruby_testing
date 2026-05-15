@@ -3,6 +3,7 @@ AllCops:
     - 'Gemfile'
     - 'spec/spec_helper.rb'
   NewCops: enable
+  TargetRubyVersion: 3.4
 Metrics/BlockLength:
   Exclude:
     - 'spec/*'
@@ -11,4 +12,5 @@ Layout/LineLength:
   Exclude:
     - 'spec/*'
     - 'spec_answers/*'
+
   
